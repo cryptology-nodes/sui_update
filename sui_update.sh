@@ -1,16 +1,6 @@
 #!/bin/bash
 
-exists()
-{
-  command -v "$1" >/dev/null 2>&1
-}
-if exists curl; then
-	echo ''
-else
-  sudo apt update && sudo apt install curl -y < "/dev/null"
-fi
-
-sleep 1 && curl -s https://raw.githubusercontent.com/cryptology-nodes/main/main/logo.sh |  bash && sleep 2
+sleep 1 && curl -s https://raw.githubusercontent.com/cryptology-nodes/main/main/logo.sh |  bash && sleep 3
 
 systemctl stop suid
 rm -rf /var/sui/db/* /var/sui/genesis.blob $HOME/sui
