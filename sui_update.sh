@@ -15,3 +15,4 @@ mv ~/sui/target/release/sui-node /usr/local/bin/
 wget -O /var/sui/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
 systemctl restart suid
 echo -e '\n\e[42m Молодец тигр у тебя все получилось :) \e[0m\n' && sleep 1
+rm sui_update.sh
